@@ -79,7 +79,7 @@ export default {
       }
       this.$axios
         .put(`auth/password/${this.user_id}/set/${this.reset_code}`, newRequest)
-        .then(res => {
+        .then(() => {
           this.resetStatus = 'Success'
           this.modalRegisterSend = true
         })
@@ -95,7 +95,7 @@ export default {
     }
   },
   mounted () {
-    this.$root.$on('bv::modal::hide', (bvEvent, modalId) => {
+    this.$root.$on('bv::modal::hide', () => {
       if (this.resetStatus === 'Success') {
         this.resetStatus = 'Pending'
         this.$router.push({ name: 'home' })

@@ -1,19 +1,16 @@
 <template>
-  <v-container style="padding: 5px; height: auto;">
-    <v-row>
-      <v-col
-        cols="12"
-        sm="6"
-        md="6"
-        v-for="(btn, index) in rightButton" :key="index"
-        @click="() => goTo(btn.to)"
+  <v-container style="padding: 16px; height: auto;">
+    <v-row v-for="(items, index) in rightButtonArr" :key="index">
+      <v-col sm="6"
+             md="6"
+             v-for="(btn, index) in items" :key="index"
       >
-        <v-btn text style="width: 100%; white-space: pre-wrap">
-          <span class="btn-label">{{ btn.label }}</span>
+        <v-btn text style="width: 100%;">
+          <span class="btn-label" style="white-space: pre-wrap; font-size: 11px; font-weight: 600">{{ btn.label }}</span>
         </v-btn>
       </v-col>
-
     </v-row>
+
   </v-container>
 </template>
 
@@ -50,7 +47,7 @@ export default {
         to: '/articles'
       },
       {
-        label: 'Политика конфиденциальности',
+        label: 'Конфиденциальности',
         to: '/info/politika-konfidencialnosti'
       },
       {
@@ -89,6 +86,64 @@ export default {
         label: 'Публичная оферта',
         to: '/info/publichnaya-oferta'
       }
+    ],
+    rightButtonArr: [
+      [{
+        label: 'Ремонт',
+        to: '/info/remont'
+      },
+      {
+        label: 'О нас',
+        to: '/info/about'
+      }],
+      [{
+        label: 'Контакты',
+        to: '/contacts'
+      },
+      {
+        label: 'Статьи',
+        to: '/articles'
+      }],
+      [{
+        label: 'Конфиденциальность',
+        to: '/info/politika-konfidencialnosti'
+      },
+      {
+        label: 'Новости',
+        to: '/news'
+      }],
+      [{
+        label: 'Реквизиты',
+        to: '/info/rekvizity'
+      },
+      {
+        label: 'Наши партнеры',
+        to: '/info/nashi-partnery'
+      }],
+      [{
+        label: 'Как заказать',
+        to: '/info/kak-zakazat'
+      },
+      {
+        label: 'Оплата',
+        to: '/info/oplata'
+      }],
+      [{
+        label: 'Доставка',
+        to: '/info/dostavka'
+      },
+      {
+        label: 'Возврат',
+        to: '/info/vozvrat'
+      }],
+      [{
+        label: 'Безопасность платажей',
+        to: '/info/bezopasnost-platezhej'
+      },
+      {
+        label: 'Публичная оферта',
+        to: '/info/publichnaya-oferta'
+      }]
     ]
   }),
   computed: {

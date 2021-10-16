@@ -32,7 +32,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import ProductListComponent from '../../components/k-product-list-component.vue'
-import { preloader } from '../../preloader'
+// import { preloader } from '../../preloader'
 
 export default {
   name: 'k-product-list',
@@ -122,8 +122,8 @@ export default {
   },
   async serverPrefetch () {
     await this.loadFullData()
-    preloader.add(this.loadingStatus, 'brandLoadingStatus')
-    preloader.add(this.breadcrumbs, 'brandBreadcrumbs')
+    // preloader.add(this.loadingStatus, 'brandLoadingStatus')
+    // preloader.add(this.breadcrumbs, 'brandBreadcrumbs')
     return true
   },
   created () {

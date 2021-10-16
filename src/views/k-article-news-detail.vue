@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { preloader } from '../preloader'
+// import { preloader } from '../preloader'
 
 export default {
   name: 'k-article-news-detail',
@@ -49,8 +49,8 @@ export default {
   },
   async serverPrefetch () {
     await this.loadData()
-    preloader.add(this.infoContent, 'articleData')
-    preloader.add(this.breadcrumbs, 'articleBreadcrumbs')
+    // preloader.add(this.infoContent, 'articleData')
+    // preloader.add(this.breadcrumbs, 'articleBreadcrumbs')
     return true
   },
   created () {

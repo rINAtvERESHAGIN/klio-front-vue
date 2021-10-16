@@ -46,7 +46,7 @@ export default {
       }
       this.$axios
         .put('auth/password/reset', newRequest)
-        .then(res => {
+        .then(() => {
           this.modalRequestPass = true
         })
         .catch(err => {

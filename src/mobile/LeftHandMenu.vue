@@ -54,16 +54,26 @@
 </template>
 
 <script>
-import EnterButton from './LeftHandMenu/components/EnterButton'
-import Location from './LeftHandMenu/components/Location'
-import ProductsCatalog from './LeftHandMenu/components/ProductsCatalog'
-import NewItems from './LeftHandMenu/components/NewItems'
-import Sale from './LeftHandMenu/components/Sale'
-import InformationTable from './LeftHandMenu/components/InformationTable'
-import TelephonesByAddresses from './LeftHandMenu/components/TelephonesByAddresses'
-import Basket from './LeftHandMenu/components/list-items-basket-delivery-favorited/Basket'
-import Favorited from './LeftHandMenu/components/list-items-basket-delivery-favorited/Favorited'
-import Delivery from './LeftHandMenu/components/list-items-basket-delivery-favorited/Delivery'
+// import EnterButton from './LeftHandMenu/components/EnterButton'
+const EnterButton = () => import('./LeftHandMenu/components/EnterButton');
+// import Location from './LeftHandMenu/components/Location'
+const Location = () => import('./LeftHandMenu/components/Location');
+// import ProductsCatalog from './LeftHandMenu/components/ProductsCatalog'
+const ProductsCatalog = () => import('./LeftHandMenu/components/ProductsCatalog');
+// import NewItems from './LeftHandMenu/components/NewItems'
+const NewItems = () => import('./LeftHandMenu/components/NewItems');
+// import Sale from './LeftHandMenu/components/Sale'
+const Sale = () => import('./LeftHandMenu/components/Sale');
+// import InformationTable from './LeftHandMenu/components/InformationTable'
+const InformationTable = () => import('./LeftHandMenu/components/InformationTable');
+// import TelephonesByAddresses from './LeftHandMenu/components/TelephonesByAddresses'
+const TelephonesByAddresses = () => import('./LeftHandMenu/components/TelephonesByAddresses');
+// import Basket from './LeftHandMenu/components/list-items-basket-delivery-favorited/Basket'
+const Basket = () => import('./LeftHandMenu/components/list-items-basket-delivery-favorited/Basket');
+// import Favorited from './LeftHandMenu/components/list-items-basket-delivery-favorited/Favorited'
+const Favorited = () => import('./LeftHandMenu/components/list-items-basket-delivery-favorited/Favorited');
+// import Delivery from './LeftHandMenu/components/list-items-basket-delivery-favorited/Delivery'
+const Delivery = () => import('./LeftHandMenu/components/list-items-basket-delivery-favorited/Delivery');
 
 export default {
   name: 'LeftHandMenu',

@@ -95,7 +95,7 @@ export default {
       }
       this.$axios
         .post('auth/register', newUser)
-        .then(res => {
+        .then(() => {
           this.registerStatus = 'Success'
           this.modalRegisterSend = true
         })
@@ -111,7 +111,7 @@ export default {
     }
   },
   mounted () {
-    this.$root.$on('bv::modal::hide', (bvEvent, modalId) => {
+    this.$root.$on('bv::modal::hide', () => {
       if (this.registerStatus === 'Success') {
         this.registerStatus = 'Pending'
         this.$router.push({ name: 'home' })

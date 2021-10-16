@@ -73,7 +73,7 @@
       <b-col id="content-area"
              :xl="LEFT_MENU === false ? 12 : 9"
              lg="9"
-             md="9"
+             md="12"
              sm="12"
              xs="12"
       >
@@ -227,13 +227,13 @@ import { email, required } from 'vuelidate/lib/validators'
 import { mapGetters, mapActions } from 'vuex'
 import 'hooper/dist/hooper.css'
 
-import BannerItem from '../components/k-banner-item.vue'
-import BrandCard from '../components/k-brand-card.vue'
-import CategoryCard from '../components/k-category-card.vue'
-import CategoryMenuItem from '../components/k-category-menu-item.vue'
-import ProductCard from '../components/k-product-card.vue'
-import Hidden from '../components/k-hidden.vue'
-import BannerItemMobile from '@/components/BannerItemMobile'
+const BannerItem = () => import('../components/k-banner-item.vue');
+const BrandCard = () => import('../components/k-brand-card.vue');
+const CategoryCard = () => import('../components/k-category-card.vue');
+const CategoryMenuItem = () => import('../components/k-category-menu-item.vue');
+const ProductCard = () => import('../components/k-product-card.vue');
+const Hidden = () => import('../components/k-hidden.vue');
+const BannerItemMobile = () => import('@/components/BannerItemMobile');
 
 export default {
   name: 'k-home',
@@ -266,15 +266,6 @@ export default {
           1300: {
             itemsToShow: 3
           }
-          // 1290: {
-          //   itemsToShow: 4
-          // },
-          // 2000: {
-          //   itemsToShow: 5
-          // },
-          // 2400: {
-          //   itemsToShow: 6
-          // }
         }
       },
       subscriptionEmail: null

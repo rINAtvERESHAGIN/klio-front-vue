@@ -140,7 +140,7 @@ export default {
     goToBasket () {
       if (this.ORDER_ACTIVE.step === 3) {
         this.UPDATE_ACTIVE_ORDER_STEP({ step: 3, promocode: null })
-          .then((res) => {
+          .then(() => {
             this.$router.push({ name: 'orderProcess' })
           })
       } else {

@@ -42,7 +42,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import ProductListComponent from '../../components/k-product-list-component.vue'
-import { preloader } from '../../preloader'
+// import { preloader } from '../../preloader'
 import PageNotFound from '../../views/k-page-not-found.vue'
 
 export default {
@@ -164,8 +164,8 @@ export default {
   },
   async serverPrefetch () {
     await this.loadData()
-    preloader.add(this.loadingStatus, 'prodLoadingStatus')
-    preloader.add(this.breadcrumbs, 'prodBreadcrumbs')
+    // preloader.add(this.loadingStatus, 'prodLoadingStatus')
+    // preloader.add(this.breadcrumbs, 'prodBreadcrumbs')
     return true
   },
   created () {

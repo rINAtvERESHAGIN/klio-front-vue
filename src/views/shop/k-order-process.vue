@@ -575,13 +575,13 @@ export default {
         setFormValue(0)
       }
     },
-    CURRENT_CITY (newVal) {
+    CURRENT_CITY () {
       if (this.ORDER_ACTIVE && this.ORDER_ACTIVE.step === 2) {
         this.deliveryCity = this.CURRENT_CITY
         this.$refs.typeahead.inputValue = this.CURRENT_CITY
       }
     },
-    CURRENT_USER (newVal, oldVal) {
+    CURRENT_USER (newVal) {
       if (newVal) {
         setTimeout(() => {
           if (this.ORDER_ACTIVE && this.ORDER_ACTIVE.private_info) {
@@ -608,14 +608,14 @@ export default {
         }, 500)
       }
     },
-    paymentType (newVal, oldVal) {
+    paymentType (newVal) {
       if (newVal === 'card') {
         this.steps.find(step => step.number === 4).nextText = 'перейти к оплате'
       } else {
         this.steps.find(step => step.number === 4).nextText = 'заказать!'
       }
     },
-    deliveryCity (newVal, oldVal) {
+    deliveryCity () {
       var cityName = this.deliveryCity
       if (cityName) {
         if (cityName === '' || cityName === 'Москва' || cityName === 'Кострома' || cityName === 'Санкт-Петербург') {

@@ -73,11 +73,16 @@
 </template>
 
 <script>
-import ArticleCard from '../components/k-article-card.vue'
-import CategoryCard from '../components/k-category-card.vue'
-import NewsCard from '../components/k-news-card.vue'
-import ProductCard from '../components/k-product-card.vue'
-import ProductListComponent from '../components/k-product-list-component.vue'
+// import ArticleCard from '../components/k-article-card.vue'
+const ArticleCard = () => import('../components/k-article-card.vue');
+// import CategoryCard from '../components/k-category-card.vue'
+const CategoryCard = () => import('../components/k-category-card.vue');
+// import NewsCard from '../components/k-news-card.vue'
+const NewsCard = () => import('../components/k-news-card.vue');
+// import ProductCard from '../components/k-product-card.vue'
+const ProductCard = () => import('../components/k-product-card.vue');
+// import ProductListComponent from '../components/k-product-list-component.vue'
+const ProductListComponent = () => import('../components/k-product-list-component.vue');
 
 export default {
   name: 'k-search-results',

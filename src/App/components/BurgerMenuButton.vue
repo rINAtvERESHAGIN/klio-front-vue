@@ -1,9 +1,14 @@
 <template>
-  <div>
-    <div className="bar1"></div>
-    <div className="bar2"></div>
-    <div className="bar3"></div>
-  </div>
+  <b-col id="burger-menu"
+         class="mb-3 mb-md-0 d-xl-none"
+         order="2"
+         @click="openBurgerMenu"
+         :class="{ change: burgerMenuActive }"
+  >
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </b-col>
 </template>
 
 <script>

@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import ContactAddressCard from '../components/k-contact-address-card.vue'
+// import ContactAddressCard from '../components/k-contact-address-card.vue'
+const ContactAddressCard = () => import('../components/k-contact-address-card.vue');
 import { mapGetters } from 'vuex'
 
 export default {

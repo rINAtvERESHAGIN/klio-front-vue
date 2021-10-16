@@ -13,8 +13,9 @@
 </template>
 
 <script>
-import ArticleNewsCard from '../components/k-article-news-card.vue'
-import { preloader } from '../preloader'
+// import ArticleNewsCard from '../components/k-article-news-card.vue'
+const ArticleNewsCard = () => import('../components/k-article-news-card.vue');
+// import { preloader } from '../preloader'
 
 export default {
   name: 'k-article-news-card',
@@ -37,8 +38,8 @@ export default {
   },
   async serverPrefetch () {
     await this.do_axios()
-    preloader.add(this.infoContent, 'infoContent')
-    preloader.add(this.breadcrumbs, 'breadcrumbs')
+    // preloader.add(this.infoContent, 'infoContent')
+    // preloader.add(this.breadcrumbs, 'breadcrumbs')
     return true
   },
   created () {
@@ -51,7 +52,7 @@ export default {
     }
   },
   watch: {
-    $route (to, from) {
+    $route () {
       this.contentType = this.$route.path.slice(1)
       this.do_axios()
     }

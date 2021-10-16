@@ -43,7 +43,7 @@
           <!--      подпись-->
           <v-list-item-content>
             <v-list-item-title>
-              <span class="list-item-title">{{ item.name }}</span>
+              <span class="list-item-title">{{ item.name.toLowerCase() }}</span>
             </v-list-item-title>
           </v-list-item-content>
           <!--кнопка с иконкой > -->

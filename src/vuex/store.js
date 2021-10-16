@@ -302,7 +302,7 @@ const store = new Vuex.Store({
         url: 'basket/current/inactivate',
         withCredentials: true
       })
-        .then((res) => {
+        .then(() => {
           commit('ERASE_BASKET_ACTIVE')
         })
     },
@@ -374,6 +374,7 @@ const store = new Vuex.Store({
           return err
         })
     },
+    // eslint-disable-next-line no-unused-vars
     GET_REDIRECT_B2P_FROM_API ({ commit }, id) {
       return this.$axios
         .get(`basket/order/payment/${id}/processing/redirect`)
@@ -384,6 +385,7 @@ const store = new Vuex.Store({
           return err
         })
     },
+    // eslint-disable-next-line no-unused-vars
     SET_ORDER_B2P_STATUS ({ commit }, {
       id,
       operation,
@@ -407,6 +409,7 @@ const store = new Vuex.Store({
           return err
         })
     },
+    // eslint-disable-next-line no-unused-vars
     CREATE_SUBSCRIPTION ({ commit }, data) {
       return this.$axios({
         method: 'POST',

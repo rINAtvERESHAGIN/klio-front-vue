@@ -96,7 +96,7 @@ export default {
   methods: {
     logout () {
       this.LOGOUT()
-        .then((res) => {
+        .then(() => {
           this.GET_ACTIVE_ORDER_FROM_API()
           this.GET_BASKET_FROM_API()
         })

@@ -121,8 +121,10 @@
 </template>
 
 <script>
-import ProductCard from '../components/k-product-card.vue'
-import ParentProductCard from '../components/k-parent-product-card.vue'
+// import ProductCard from '../components/k-product-card.vue'
+const ProductCard = () => import('../components/k-product-card.vue')
+// import ParentProductCard from '../components/k-parent-product-card.vue'
+const ParentProductCard = () => import('../components/k-parent-product-card.vue')
 
 export default {
   name: 'k-product-list-component',
@@ -240,11 +242,11 @@ export default {
       this.loading = true
       this.reloadPage(this.getParams())
     },
-    responseData (newValue, oldValue) {
+    responseData (newValue) {
       this.response = newValue
       this.loading = false
     },
-    filtersData (newValue, oldValue) {
+    filtersData (newValue) {
       this.filters = newValue
     },
     $route (to, from) {

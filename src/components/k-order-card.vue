@@ -34,7 +34,8 @@
 </template>
 
 <script>
-import OrderProductCard from '../components/k-order-product-card.vue'
+// import OrderProductCard from '../components/k-order-product-card.vue'
+const OrderProductCard = () => import('../components/k-order-product-card.vue')
 
 export default {
   components: {

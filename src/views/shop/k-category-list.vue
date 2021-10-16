@@ -62,7 +62,7 @@
 import { mapActions, mapGetters } from 'vuex'
 import CategoryCard from '../../components/k-category-card.vue'
 import ProductListComponent from '../../components/k-product-list-component.vue'
-import { preloader } from '../../preloader'
+// import { preloader } from '../../preloader'
 import PageNotFound from '../../views/k-page-not-found.vue'
 
 export default {
@@ -202,9 +202,9 @@ export default {
   },
   async serverPrefetch () {
     await this.loadData()
-    preloader.add(this.loadingStatus, 'catLoadingStatus')
-    preloader.add(this.breadcrumbs, 'catBreadcrumbs')
-    preloader.add(this.showFilters, 'showFilters')
+    // preloader.add(this.loadingStatus, 'catLoadingStatus')
+    // preloader.add(this.breadcrumbs, 'catBreadcrumbs')
+    // preloader.add(this.showFilters, 'showFilters')
     return true
   },
   created () {
@@ -234,7 +234,7 @@ export default {
               this.loadingStatus = 'success'
               if (res.data.with_filters === true) {
                 this.GET_CATEGORY_FILTERS_FROM_API(this.category_name)
-                  .then((res) => {
+                  .then(() => {
                     this.showFilters = true
                   })
               } else {

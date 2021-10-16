@@ -48,7 +48,7 @@ export default {
       }
       this.$axios
         .post('auth/login', credentials, { withCredentials: true })
-        .then(res => {
+        .then(() => {
           this.GET_ACTIVE_ORDER_FROM_API()
           this.GET_BASKET_FROM_API()
           this.GET_CURRENT_USER_FROM_API()

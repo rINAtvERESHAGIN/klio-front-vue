@@ -245,7 +245,7 @@
 </template>
 
 <script>
-import { preloader } from '../preloader'
+// import { preloader } from '../preloader'
 
 export default {
   name: 'k-static-page-detail',
@@ -275,8 +275,8 @@ export default {
   },
   async serverPrefetch () {
     await this.do_axios()
-    preloader.add(this.page, 'pageContent')
-    preloader.add(this.breadcrumbs, 'breadcrumbs')
+    // preloader.add(this.page, 'pageContent')
+    // preloader.add(this.breadcrumbs, 'breadcrumbs')
     return true
   },
   created () {
@@ -289,9 +289,9 @@ export default {
     }
   },
   watch: {
-    page_name (newVal) {
+    page_name () {
     },
-    $route (to, from) {
+    $route () {
       this.do_axios()
     }
   },
@@ -308,7 +308,7 @@ export default {
         }
       ]
     },
-    do_axios (newVal) {
+    do_axios () {
       return this.$axios
         .get(`/general/pages/${this.page_name}/detail`)
         .then(response => {

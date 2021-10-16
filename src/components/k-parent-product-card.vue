@@ -63,8 +63,8 @@
 </template>
 
 <script>
-import ProductCard from '../components/k-child-product-card.vue'
-
+// import ProductCard from '../components/k-child-product-card.vue'
+const ProductCard = () => import('../components/k-child-product-card.vue');
 export default {
   name: 'k-parent-product-card',
   props: ['categoryData', 'parentProductData'],
