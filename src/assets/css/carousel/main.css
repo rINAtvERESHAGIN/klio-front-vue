@@ -1,0 +1,60 @@
+#carousel-main {
+    height: 409px;
+    width: 100%;
+    /*margin: 0 auto 50px auto;*/
+    /*display: none;*/
+}
+
+#carousel-main a.carousel-control-prev, a.carousel-control-next {
+    display: none;
+}
+
+#carousel-main .carousel-indicators li {
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #carousel-main .carousel-caption h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #carousel-main {
+        width: 100%;
+    }
+
+    #carousel-main .carousel-caption h1 {
+        font-size: 30px;
+    }
+
+    #carousel-main .carousel-item img {
+        height: fit-content;
+        width: initial !important;
+        max-width: fit-content;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #footer-menu-row {
+        display: block;
+        column-count: 1;
+    }
+
+    #footer-menu-row li {
+        line-height: 2rem;
+    }
+
+    #carousel-main {
+        height: auto;
+    }
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
